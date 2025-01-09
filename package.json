@@ -1,0 +1,53 @@
+{
+  "name": "r505",
+  "appTitle": "Test",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js --progress",
+    "build-dev": "webpack --config webpack.dev.js --progress"
+  },
+  "author": "Antoine",
+  "license": "ISC",
+  "dependencies": {
+    "@stomp/stompjs": "^7.0.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "classnames": "^2.5.1",
+    "mobx": "^6.13.5",
+    "mobx-react": "^9.1.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "sockjs-client": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "7.25.9",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@eslint/js": "9.16.0",
+    "@stylistic/eslint-plugin": "2.11.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-react": "^7.26.0",
+    "globals": "15.13.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

@@ -1,0 +1,3 @@
+/*! For license information please see main.7e0d84d445b47def19c6.bundle.js.LICENSE.txt */
+"use strict";(self.webpackChunkr505=self.webpackChunkr505||[]).push([[792],{576:(e,t,r)=>{var n=r(540),a=r(338);const c=(0,n.createContext)(),l={};var s=r(336);const u=function(){return n.createElement(c.Provider,{value:l},n.createElement("main",{className:"Yc91ejF1nvIFuF2QVJPs"},n.createElement("h1",null,"Hello World"),n.createElement(s.Fc,{variant:"primary"},"This is a primary alert—check it out!")))};(0,a.H)(document.getElementById("appMountPoint")).render(n.createElement(u,null))}},e=>{e.O(0,[96],(()=>e(e.s=576))),e.O()}]);
+//# sourceMappingURL=main.7e0d84d445b47def19c6.bundle.js.map
