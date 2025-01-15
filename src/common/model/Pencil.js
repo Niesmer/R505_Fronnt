@@ -71,6 +71,11 @@ class Pencil {
     this._context.strokeStyle = this._color;
   }
 
+  fromJson(json) {
+    this._width = json.w;
+    this._color = json.c;
+  }
+
   toJson() {
     return {
       w: this._width,

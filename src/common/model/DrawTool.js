@@ -45,10 +45,20 @@ class DrawTool {
     this._canvasDom.addEventListener('mousedown', evt => this._setupMouseEvents(evt), { once: true, passive: true });
 
     this._canvasDom.addEventListener('touchstart', evt => this._setupTouchEvents(evt), { once: true, passive: true });
+
+    this.drawAllPoints(DrawTool.loadFromStorage());
   }
 
   get pencil() {
     return this._pencil;
+  }
+
+  reset() {
+    this._points = [];
+
+    this._context.clearRect(0, 0, this._canvasDom.width, this._canvasDom.height);
+
+    this._saveToStorage();
   }
 
   drawAllPoints(points) {
@@ -65,9 +75,12 @@ class DrawTool {
     for (let i = 0; i < this._points.length; i++) {
       point = this._points[i];
       x = Math.round(point[0] * this._canvasDom.width / POINT_SCALE_SIZE);
-      y = Math.round(point[0] * this._canvasDom.width / POINT_SCALE_SIZE);
+      y = Math.round(point[1] * this._canvasDom.height / POINT_SCALE_SIZE);
 
       if (point.length > 2) {
+        this._pencil.fromJson(point[2]);
+        this._context.strokeStyle = this._pencil.color;
+        this._context.lineWidth = this._pencil.width;
         this._context.closePath();
         this._context.beginPath();
         this._context.moveTo(x, y);

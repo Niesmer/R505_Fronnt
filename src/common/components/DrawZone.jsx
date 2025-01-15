@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import propTypes from 'prop-types';
+import { Button, Col, Row } from 'react-bootstrap';
 import PencilBar from '../../drawtest/components/PencilBar';
 import { PropTypes as MobTypes } from 'mobx-react';
 
@@ -30,6 +29,7 @@ function DrawZone({ drawTool }) {
         </Col>
         <Col xs={3}>
           <PencilBar pencil={drawTool.pencil}></PencilBar>
+          <Button onClick={() => drawTool.reset()}>Reset</Button>
         </Col>
       </Row>
     </div>
